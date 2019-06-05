@@ -1,14 +1,14 @@
 <h1>Login</h1>
 <hr>
-<div>
+<div class="col-md-4">
   <form [formGroup]= "loginForm" (ngSubmit)='login(loginForm.value)'>
-    <div>
-      <label for="userName">User Name:</label>      
+    <div class="form-group">
+      <label for="userName">User Name</label>      
       <input [formControl]="userName" name="userName" id="userName" type="text" class="form-control"
         placeholder="User Name..." required />
     </div>
-    <div>
-      <label for="password">Password:</label>
+    <div class="form-group">
+      <label for="password">Password</label>
       <input [formControl]="password" name="password" id="password" type="password" class="form-control"
         placeholder="Password..." required />
     </div>
