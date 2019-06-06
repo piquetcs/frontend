@@ -13,7 +13,8 @@ export class ProfileComponentComponent implements OnInit {
     firstName: "",
     lastName: "",
     email: "",
-    password: ""
+    password: "",
+    phone: ""
   };
 
   id: number = 0;

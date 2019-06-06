@@ -9,17 +9,13 @@ import { LoginComponent} from './login/login.component'
 import { LoginService} from './login/login.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavigatorComponent } from './navigator/navigator.component';
-import { ActivitiesListComponent } from './activities-list/activities-list.component';
-import { ActivityCardComponent } from './activity-card/activity-card.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    NavigatorComponent,
-    ActivitiesListComponent,
-    ActivityCardComponent
+    NavigatorComponent
   ],
   imports: [
     BrowserModule,
