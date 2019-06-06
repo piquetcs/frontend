@@ -1,0 +1,12 @@
+<h2>Create Profile</h2>
+<form>
+  First name:<br />
+  <input type="text" name="firstname" [(ngModel)]="profile.firstName" /><br />
+  Last name:<br />
+  <input type="text" name="lastname" [(ngModel)]="profile.lastName" /><br />
+  Email:<br />
+  <input type="text" name="email" [(ngModel)]="profile.email" /><br />
+  Password:<br />
+  <input type="text" name="password" [(ngModel)]="profile.password" /><br />
+  <button name="submit" (click)="submitProfile()">Create Profile</button>
+</form>

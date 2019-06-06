@@ -1,3 +1,5 @@
+
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms'
@@ -28,6 +30,7 @@ import { ActivityCardComponent } from './activity-card/activity-card.component'
   providers: [
     LoginService
   ],
+
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
