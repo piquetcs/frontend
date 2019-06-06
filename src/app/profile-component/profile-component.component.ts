@@ -8,7 +8,7 @@ import { ProfileService } from "../services/profile.service";
   styleUrls: ["./profile-component.component.scss"]
 })
 export class ProfileComponentComponent implements OnInit {
-  profiles: Profile[] = PROFILES;
+  profiles: Profile[];
   profile: Profile = {
     firstName: "",
     lastName: "",
@@ -20,9 +20,12 @@ export class ProfileComponentComponent implements OnInit {
 
   ngOnInit() {}
 
-  /*submitProfile(): void {
-    this.profileService.addProfile(this.profile);
-  }*/
+  submitProfile(): void {
+    this.profileService
+      .addUser(this.profile)
+      .subscribe(profile => this.profile);
+    console.log("User added");
+  }
 
   getProfiles(): void {
     this.profileService.getUsers().subscribe(

@@ -22,4 +22,8 @@ export class ProfileService {
   public getUsers(): Observable<Profile[]> {
     return this.http.get<Profile[]>(this.apiUrl);
   }
+
+  public addUser(profile: Profile): Observable<Profile> {
+    return this.http.post<Profile>(this.apiUrl, profile, httpOptions);
+  }
 }
