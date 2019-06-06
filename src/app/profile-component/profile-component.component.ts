@@ -16,6 +16,8 @@ export class ProfileComponentComponent implements OnInit {
     password: ""
   };
 
+  id: number = 0;
+
   constructor(private profileService: ProfileService) {}
 
   ngOnInit() {}
@@ -25,17 +27,5 @@ export class ProfileComponentComponent implements OnInit {
       .addUser(this.profile)
       .subscribe(profile => this.profile);
     console.log("User added");
-  }
-
-  getProfiles(): void {
-    this.profileService.getUsers().subscribe(
-      users => {
-        this.profiles = users;
-        console.log("Fetched users", this.profiles);
-      },
-      err => {
-        console.log(err);
-      }
-    );
   }
 }

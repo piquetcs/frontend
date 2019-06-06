@@ -26,4 +26,9 @@ export class ProfileService {
   public addUser(profile: Profile): Observable<Profile> {
     return this.http.post<Profile>(this.apiUrl, profile, httpOptions);
   }
+
+  public getUserById(id: number): Observable<Profile> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<Profile>(url);
+  }
 }
